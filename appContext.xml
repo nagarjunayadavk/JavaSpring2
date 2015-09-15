@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="fruit" class="Food.Fruit"></bean>
+    <bean id="rice" class="Food.Rice"></bean>
+     
+     <!-- Constructor Injection -->
+	     <bean id="Meal" class="Food.Meal">
+	     <!-- Constructor Injection with index-->
+	         <constructor-arg index="0" ref="fruit" />
+	         <constructor-arg index="1" ref="rice" />
+	     </bean>
+     
+	     <bean id="MealAlt" class="Food.Meal">
+	     <!-- Constructor Injection with nameRef in Meal Class-->
+	         <constructor-arg name="f" ref="fruit" />
+	         <constructor-arg name="r" ref="rice" />
+	     </bean>
+
+</beans>

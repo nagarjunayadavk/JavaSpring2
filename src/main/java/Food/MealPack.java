@@ -22,7 +22,7 @@ public class MealPack {
 	}
 	
 	public String currentMeal() {
-		String meal = "This is meal paclk contains :: ";
+		String meal = "This is meal pack contains :: ";
 		if(fruit != null) meal +="  Fruit";
 		if(rice != null) meal +="   Rice";
 		
